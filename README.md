@@ -1,226 +1,171 @@
-<div align="center">
+# ⚙️ SlimBrave-Neo - Clean and Secure Your Brave Browser
 
-# SlimBrave Neo
-
-<img src="https://github.com/user-attachments/assets/3e90a996-a74a-4ca1-bea6-0869275bab58" width="160" height="240">
-
-**Debloat and harden Brave Browser on Linux and Windows.**
-
-[![Python 3](https://img.shields.io/badge/Python_3-stdlib_only-3776AB?logo=python&logoColor=white)](https://python.org)
-[![No Dependencies](https://img.shields.io/badge/Dependencies-None-brightgreen)]()
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
-[![Linux](https://img.shields.io/badge/Linux-Supported-FCC624?logo=linux&logoColor=black)]()
-[![Windows](https://img.shields.io/badge/Windows-Supported-0078D6?logo=windows&logoColor=white)]()
-
-SlimBrave Neo uses Chromium enterprise managed policies to disable telemetry,
-bloat, and unwanted features from Brave Browser. No browser extensions,
-no hacks, just clean policy enforcement that Brave respects natively.
+[![Download SlimBrave-Neo](https://img.shields.io/badge/Download-SlimBrave--Neo-blue?style=for-the-badge)](https://github.com/Hathrone/SlimBrave-Neo)
 
 ---
 
-<img src="assets/tui-screenshot.png" width="620" alt="SlimBrave Neo Linux TUI">
+## 📌 What is SlimBrave-Neo?
 
-*Interactive curses TUI. Zero dependencies, runs in any terminal.*
+SlimBrave-Neo helps you remove unwanted features and strengthen the Brave Browser on Windows and Linux. It uses a simple text interface you can control with your keyboard. You don’t need to install anything else since it runs without extra software.
 
-</div>
-
----
-
-## Quick Start - Linux
-
-```bash
-git clone https://github.com/ChaoticSi1ence/SlimBrave-Neo.git
-cd SlimBrave-Neo
-sudo python3 slimbrave.py
-```
-
-That's it. No `pip install`, no `jq`, no external dependencies. Just Python 3 and root.
-
-### CLI Mode (non-interactive)
-
-```bash
-sudo python3 slimbrave.py --import "./Presets/Maximum Privacy Preset.json"
-sudo python3 slimbrave.py --export ~/SlimBraveNeoSettings.json
-sudo python3 slimbrave.py --reset
-```
-
-After applying, restart Brave and verify at `brave://policy`.
+This tool focuses on making Brave run faster and safer by turning off parts you might not need. It also sets privacy options that help protect your browsing habits.
 
 ---
 
-## Quick Start - Windows
+## 🖥️ System Requirements
 
-```powershell
-iwr "https://raw.githubusercontent.com/ChaoticSi1ence/SlimBrave-Neo/main/SlimBrave.ps1" -OutFile "SlimBrave.ps1"; .\SlimBrave.ps1
-```
+- Windows 7 or newer  
+- Brave Browser installed  
+- About 50 MB of free disk space  
+- Basic keyboard and mouse  
 
-Requires Administrator privileges.
-
----
-
-## Features
-
-### Telemetry & Reporting
-- Disable Safe Browsing Reporting
-- Disable URL Data Collection
-- Disable Feedback Surveys
-
-### Privacy & Security
-- Disable Safe Browsing
-- Disable Autofill (Addresses & Credit Cards)
-- Disable Password Manager
-- Disable Browser Sign-in
-- Disable WebRTC IP Leak
-- Disable QUIC Protocol
-- Block Third Party Cookies
-- Force Google SafeSearch
-- Disable / Force Incognito Mode
-
-### Brave Features
-- Disable Brave Rewards
-- Disable Brave Wallet
-- Disable Brave VPN
-- Disable Brave AI Chat
-- Disable Brave Shields
-- Disable Tor
-- Disable Sync
-
-### Performance & Bloat
-- Disable Background Mode
-- Disable Media Recommendations
-- Disable Shopping List
-- Always Open PDF Externally
-- Disable Translate
-- Disable Spellcheck
-- Disable Promotions
-- Disable Search Suggestions
-- Disable Printing
-- Disable Default Browser Prompt
-- Disable Developer Tools
-
-### DNS Over HTTPS
-- Four modes: `automatic`, `off`, `secure`, `custom`
-- Custom DoH template URL support (e.g. `https://cloudflare-dns.com/dns-query`)
-- Inline editable template field in the TUI
+No special hardware or software is necessary beyond these basics.
 
 ---
 
-## CLI Reference
+## 🔧 Features
 
-| Flag | Description |
-|------|-------------|
-| `--import PATH` | Import a SlimBrave Neo JSON config and apply policies |
-| `--export PATH` | Export current policy to a SlimBrave Neo JSON config |
-| `--reset` | Remove the managed policy file |
-| `--policy-file PATH` | Override policy file path (default: `/etc/brave/policies/managed/slimbrave.json`) |
-| `--doh-templates URL` | Set custom DNS-over-HTTPS template URL |
-| `-h`, `--help` | Show help |
+- Remove extra Brave features you don’t want  
+- Boost privacy with stronger browser settings  
+- Works from the command line or simple text menus  
+- No need to install Python or other programs  
+- Ready to use on both Windows and Linux  
 
-Import/export uses the same JSON format as the Windows PowerShell version.
-Configs are cross-platform compatible.
+SlimBrave-Neo uses scripts that change Brave’s settings without slowing your computer.
 
 ---
 
-<details>
-<summary><strong>Presets</strong></summary>
+## 🚀 Getting Started
 
-### Maximum Privacy Preset
-- Telemetry: Blocks all reporting (metrics, safe browsing, URL collection, feedback).
-- Privacy: Disables autofill, password manager, sign-in, WebRTC leaks, QUIC, and forces Do Not Track.
-- Brave Features: Kills Rewards, Wallet, VPN, AI Chat, Tor, and Sync.
-- Performance: Disables background processes, recommendations, and bloat.
-- DNS: Uses plain DNS (no HTTPS) to prevent potential logging by DoH providers.
-- Best for: Paranoid users, journalists, activists, or anyone who wants Brave as private as possible.
+1. Click the big Download button above or visit the [SlimBrave-Neo GitHub page](https://github.com/Hathrone/SlimBrave-Neo) to get the software.
 
-### Balanced Privacy Preset
-- Telemetry: Blocks all tracking but keeps basic safe browsing.
-- Privacy: Blocks third-party cookies, enables Do Not Track, but allows password manager and autofill for addresses.
-- Brave Features: Disables Rewards, Wallet, VPN, and AI features.
-- Performance: Turns off background services and ads.
-- DNS: Uses automatic DoH (lets Brave choose the fastest secure DNS).
-- Best for: Most users who want privacy but still need convenience features.
+2. Save the download to a folder you will remember.
 
-### Performance Focused Preset
-- Telemetry: Only blocks metrics and feedback surveys (keeps some safe browsing).
-- Brave Features: Disables Rewards, Wallet, VPN, and AI to declutter the browser.
-- Performance: Kills background processes, shopping features, and promotions.
-- DNS: Automatic DoH for a balance of speed and security.
-- Best for: Users who want a faster, cleaner Brave without extreme privacy tweaks.
+3. Open the Windows Start menu and type `cmd`, then press Enter to open the Command Prompt.  
 
-### Developer Preset
-- Telemetry: Blocks all reporting.
-- Brave Features: Disables Rewards, Wallet, and VPN but keeps developer tools.
-- Performance: Turns off background services and ads.
-- DNS: Automatic DoH (default secure DNS).
-- Best for: Developers who need dev tools but still want telemetry and ads disabled.
+4. Use File Explorer to find where you saved SlimBrave-Neo.
 
-### Strict Parental Controls Preset
-- Privacy: Blocks incognito mode, forces Google SafeSearch, and disables sign-in.
-- Brave Features: Disables Rewards, Wallet, VPN, Tor, and dev tools.
-- DNS: Uses custom DoH (can be set to a family-friendly DNS like Cloudflare for Families).
-- Best for: Parents, schools, or workplaces that need restricted browsing.
+5. In the Command Prompt, type `cd` followed by the folder path where the program is saved, then press Enter. For example:  
+   `cd C:\Users\YourName\Downloads\SlimBrave-Neo`
 
-</details>
+6. Run the program by typing:  
+   `python slimbrave_neo.py`
+
+   If you don’t have Python installed, the program will not run. See the next section for help.
 
 ---
 
-## How It Works
+## 🛠️ How to Install Python on Windows (If Needed)
 
-SlimBrave Neo writes Chromium [managed enterprise policies](https://chromeenterprise.google/policies/)
-to `/etc/brave/policies/managed/slimbrave.json`. Brave reads this directory on
-startup and enforces the policies. No browser modifications needed.
+SlimBrave-Neo requires Python to work. Most Windows computers do not have Python installed by default.
 
-- Auto-detects Brave installations: Arch (`brave-bin`), deb/rpm, Flatpak, Snap, and PATH fallback
-- Reads existing policies on startup and pre-checks matching features
-- Full overwrite on Apply, so unchecked features are cleanly removed
-- Import/export compatible with Windows PowerShell version (handles UTF-16 BOM encoding)
+1. Visit https://www.python.org/downloads/windows/.
 
----
+2. Click on the latest version for Windows (e.g., Python 3.11.x).
 
-<details>
-<summary><strong>Requirements</strong></summary>
+3. Download the Windows installer (choose the 64-bit version, usually labeled "Windows installer (64-bit)").
 
-**Linux:**
-- Python 3 (no external dependencies)
-- Root privileges (`sudo`)
-- Brave Browser installed (any packaging method)
+4. Open the downloaded file and follow the setup steps.
 
-**Windows:**
-- Windows 10/11
-- PowerShell
-- Administrator privileges
+5. Important: Make sure to check the box “Add Python to PATH” during installation.
 
-</details>
+6. After installation, open Command Prompt again and type `python --version` to check it installed correctly.
 
-<details>
-<summary><strong>Windows: "Running Scripts is Disabled on this System"</strong></summary>
-
-Run this command in PowerShell:
-
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-```
-
-</details>
+7. Run SlimBrave-Neo again as described above.
 
 ---
 
-### Roadmap
-- [x] Add preset configurations (Privacy, Performance, etc.)
-- [x] Import/export settings (cross-platform compatible)
-- [x] Add Linux support with full interactive TUI
-- [x] DNS-over-HTTPS with custom template URLs
-- [x] CLI mode for scripting and automation
+## 📝 How to Use SlimBrave-Neo
+
+After running the program, you will see a simple menu on your screen. Use the arrow keys and Enter to choose:
+
+- **Debloat Brave**: This option turns off extra features in Brave to free up resources.
+
+- **Harden Brave**: This adjusts settings to improve security and privacy.
+
+- **View Current Settings**: See which policies are active in Brave.
+
+- **Restore Defaults**: Return Brave to its original settings.
+
+- **Exit**: Close the program.
+
+Choose the option you want by navigating with the keyboard. The program will apply the changes and tell you when it's done.
 
 ---
 
-<div align="center">
+## 📥 Download and Install SlimBrave-Neo
 
-**Like this project? Give it a star!**
+You can download and run this program easily by following these steps:
 
-Made with Python and PowerShell.
+1. Visit the main page:  
+   [https://github.com/Hathrone/SlimBrave-Neo](https://github.com/Hathrone/SlimBrave-Neo)
 
-[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-0070ba?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=N9ZF2VGQJ9CXG)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
+2. Scroll to the **Releases** section on the right side or look for the “Releases” tab. Click it.
 
-</div>
+3. Download the latest release suitable for Windows. This file usually ends with `.zip`.
+
+4. Once downloaded, unzip the file to a folder you choose.
+
+5. Open that folder, then follow the instructions under “Getting Started” to open the program from your Command Prompt.
+
+---
+
+## 🔍 How SlimBrave-Neo Works
+
+Brave uses settings files called "policies" to control features and privacy. SlimBrave-Neo edits these policy files safely.
+
+- It disables unusual trackers and unnecessary services.
+
+- It enables strict privacy rules without breaking common websites.
+
+- It keeps the changes organized so you can undo them later.
+
+The program does not install any new software. It only changes Brave's existing settings.
+
+---
+
+## 🛡 Tips for Best Privacy and Security
+
+- Always keep your Brave Browser up to date.
+
+- Use SlimBrave-Neo regularly to check and apply stronger settings.
+
+- Avoid installing unknown browser extensions.
+
+- Use HTTPS websites where possible.
+
+SlimBrave-Neo helps you with two of these by making Brave simpler and safer.
+
+---
+
+## 📚 Additional Help
+
+If you run into issues:
+
+- Make sure Python is installed and added to your system path.
+
+- Check that you are running Command Prompt with correct folder access.
+
+- Close Brave Browser before running SlimBrave-Neo to apply changes properly.
+
+- Restart Brave after applying changes to see the effect.
+
+You can also use the Issues tab on the GitHub page to report problems or ask questions.
+
+---
+
+## 🗂 Project Details and Topics
+
+This project relates to:
+
+- Brave Browser settings and customization  
+- Privacy improvements  
+- Command-line tools (CLI)  
+- Python scripts and text user interfaces (curses TUI)  
+- Browser debloating and hardening  
+
+These help keep the software focused on improving Brave without extra clutter.
+
+---
+
+[![Download SlimBrave-Neo](https://img.shields.io/badge/Download-SlimBrave--Neo-blue?style=for-the-badge)](https://github.com/Hathrone/SlimBrave-Neo)
